@@ -38,12 +38,11 @@ In this program we use python OpenCv library to help us to count the number of f
   true return actual coordinate
   `defects = cv2.convexityDefects(cnt,hull)`
   ![image](https://user-images.githubusercontent.com/85050265/223634862-b5258b6d-9f8f-463d-a1b8-e3534b8f2c03.png)
-  More about convexity defect :https://theailearner.com/2020/11/09/convexity-defects-opencv/
+  More about convexity defect :https://theailearner.com/2020/11/09/convexity-defects-opencv/ <br>
   Defects is a (x,y,4) numpy array, we use 3 points in each and calculate the distance between them as a,b,c.
 
 ### Calculation of angle using convextiy defect
-  >After that, we use Pythagorean theorem and ![cosine rule](https://www.mathsisfun.com/algebra/trig-cosine-law.html) to calculate the angle between b and c , if the     angle <= 90 , number of     fingers +1 , as we know that the angle between fingers won't be >90 (assume you don't have disorder on your hand).
-  
-  >The angle between fingers is acute.Hence we only consider acute angles as fingers.
+  >After that, we use Pythagorean theorem and [cosine rule](https://www.mathsisfun.com/algebra/trig-cosine-law.html) to calculate the angle between b and c , if the     angle <= 90 , number of     fingers +1 , as we know that the angle between fingers won't be >90 (assume you don't have disorder on your hand).<br><br>
+  The angle between fingers is acute.Hence we only consider acute angles as fingers.
   The convexdefect actually is the number of gap betweeen fingers , so at the end we need to increment the nunber of finger by 1 to get the actual number of finger. 
 
