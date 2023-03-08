@@ -43,6 +43,7 @@ In this program we use python OpenCv library to help us to count the number of f
 
 ### Calculation of angle using convextiy defect
   >After that, we use Pythagorean theorem and ![cosine rule](https://www.mathsisfun.com/algebra/trig-cosine-law.html) to calculate the angle between b and c , if the     angle <= 90 , number of     fingers +1 , as we know that the angle between fingers won't be >90 (assume you don't have disorder on your hand).
-  The angle between fingers is acute.Hence we only consider acute angles as fingers.
+  
+  >The angle between fingers is acute.Hence we only consider acute angles as fingers.
   The convexdefect actually is the number of gap betweeen fingers , so at the end we need to increment the nunber of finger by 1 to get the actual number of finger. 
 
