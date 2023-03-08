@@ -18,15 +18,15 @@ In this program we use python OpenCv library to help us to count the number of f
    https://setosa.io/ev/image-kernels/
  
 ### Contour 
-  >We use `cv2.findContours()` to find the max contour and draw it on the screen.
+  >We use `cv2.findContours()` to find the max contour and draw it on the screen.<br>
   Contour is an outline representing or bounding the shape or form of something ,joining points with similar colors
   `cv2.findContours(thresh,cv2.RETR_TREE,cv2.CHAIN_APPROX_SIMPLE)`.
   `cv2.RETR_EXTERNAL` returns the biggest contour ,but we use  `cv2. RETR_TREE` that 
   finds all the promising contour lines and reconstructs a full hierarchy of nested contours.
 
 ### Convexhull
- >Hull means the exterior or the shape of the object.
- Therefore, the Convex Hull of a shape or a group of points is a tight fitting convex boundary around the points or the shape.
+ >Hull means the exterior or the shape of the object.<br>
+ Therefore, the Convex Hull of a shape or a group of points is a tight fitting convex boundary around the points or the shape.<br>
  We draw convexhull using `cv2.convexHull(cnt)` function. We also record the convexdefectivity using `defects = cv2.convexityDefects(cnt,hull)` 
  ![image](https://user-images.githubusercontent.com/85050265/223634417-10f82aa3-7a09-48dc-a1d3-2a8801dae99d.png)
  
@@ -36,8 +36,8 @@ In this program we use python OpenCv library to help us to count the number of f
   `hull = cv2.convexHull(cnt,returnPoints=False)` 
   false return index of convexhull indx
   true return actual coordinate
-  `defects = cv2.convexityDefects(cnt,hull)`
-  ![image](https://user-images.githubusercontent.com/85050265/223634862-b5258b6d-9f8f-463d-a1b8-e3534b8f2c03.png)
+  `defects = cv2.convexityDefects(cnt,hull)`<br><br>
+  ![image](https://user-images.githubusercontent.com/85050265/223634862-b5258b6d-9f8f-463d-a1b8-e3534b8f2c03.png)<br>
   More about convexity defect :https://theailearner.com/2020/11/09/convexity-defects-opencv/ <br>
   Defects is a (x,y,4) numpy array, we use 3 points in each and calculate the distance between them as a,b,c.
 
